@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "YouTube for Dancers",
+  "description": "Simple controls for looping, speed, and mirroring",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": ["youtube-for-dancers.js"]
+    }
+  ]
+}
