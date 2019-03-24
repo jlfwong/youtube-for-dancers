@@ -22,6 +22,12 @@ function setRepeatEnd(time = video.currentTime) {
   updateUI()
 }
 
+function restartLoop() {
+  if (repeatStart != null && repeatEnd != null) {
+    video.currentTime = repeatStart
+  }
+}
+
 function bindListeners() {
   var seeking = false
   video.addEventListener('seeking', () => { seeking = true })
@@ -38,7 +44,7 @@ function bindListeners() {
         } else {
           // This is the result of regular playback, and we've reached the end of
           // the repeat range! Go back to the start.
-          video.currentTime = repeatStart
+          restartLoop()
         }
       } else if (repeatStart - video.currentTime > 0.1) {
         if (seeking) {
@@ -79,6 +85,12 @@ function bindListeners() {
 
     if (e.key === 'e') {
       setRepeatEnd()
+      return
+    }
+
+    if (e.key === 'r') {
+      restartLoop()
+      updateUI()
       return
     }
   })

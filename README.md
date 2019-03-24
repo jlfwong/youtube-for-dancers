@@ -10,6 +10,7 @@ from dance videos on youtube.com.
 - Press `+` or `=` to increase the playback speed in increments of 5%
 - Press `s` to mark the current time as the start of a video loop
 - Press `e` to mark the current time as the end of a video loop
+- Press `r` to go back go back to the start of the loop
 
 # Installation instructions
 
