@@ -4,12 +4,13 @@
   "name": "YouTube for Dancers",
   "description": "Simple controls for looping, speed, and mirroring",
   "version": "1.0",
-
   "content_scripts": [
     {
       "matches": [
-        "https://www.youtube.com/*"
+        "https://www.youtube.com/*",
+        "https://youtube.googleapis.com/*"
       ],
+      "all_frames": true,
       "js": ["youtube-for-dancers.js"]
     }
   ]
