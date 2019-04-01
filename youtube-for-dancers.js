@@ -123,7 +123,7 @@ const updateUI = (function() {
 
   function timeFromEvent(ev) {
     const bounds = progressList.getBoundingClientRect()
-    return video.duration * (ev.screenX - bounds.x) / bounds.width
+    return video.duration * (ev.clientX - bounds.x) / bounds.width
   }
 
   repeatStartMarker.addEventListener("mousedown", function() {
